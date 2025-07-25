@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.calculator {
+  background: #2d2d3a;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 360px;
+}
+
+.calculator input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 12px;
+  background: #3e3e5a;
+  color: #fff;
+  text-align: right;
+  margin-bottom: 20px;
+  box-shadow: inset 0 0 5px #000;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.buttons button {
+  padding: 15px 10px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.buttons button:hover {
+  transform: scale(1.05);
+}
+
+.buttons button:nth-child(4n) {
+  background: #ff6b6b;
+}
+.buttons button:nth-child(4n):hover {
+  background: #ff4e4e;
+}
+
+.buttons button:nth-child(1),
+.buttons button:nth-child(2) {
+  background: #8884ff;
+}
+.buttons button:nth-child(1):hover,
+.buttons button:nth-child(2):hover {
+  background: #6f6ae3;
+}
+
+.buttons .zero {
+  grid-column: span 2;
+  background: #ffa502;
+}
+.buttons .zero:hover {
+  background: #e19d01;
+}
+
+.buttons button:not(.zero):not(:nth-child(4n)):not(:nth-child(1)):not(:nth-child(2)) {
+  background: #1dd1a1;
+}
+.buttons button:not(.zero):not(:nth-child(4n)):not(:nth-child(1)):not(:nth-child(2)):hover {
+  background: #10ac84;
+}
